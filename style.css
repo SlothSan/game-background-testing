@@ -32,6 +32,7 @@
     margin-bottom:-7px; /*Fix for safari gap*/
     min-height:100px;
     max-height:150px;
+    z-index: -2;
     
   }
   
@@ -39,10 +40,11 @@
     width: 100px;
     height: 100px;
     position: absolute;
-    top: 20px;
+    top: 370px;
     right: 40px;
     background-color: #f9cb5d;
     border-radius: 50%;
+    z-index: 2;
   }
   
   /* waves */
@@ -56,6 +58,7 @@
     overflow-x: hidden;
     background-color: #1e90ff;
     border-top: 2px white solid;
+    z-index: 4;
   }
   
   .wave {
@@ -80,18 +83,7 @@
     opacity: 0.5;
   }
   
-  /* KEYFRAMES */
-  @keyframes animateCloud {
-      0% {
-          margin-left: -500px;
-      }
-      100% {
-          margin-left: 100%;
-      }
-  }
-  
-  
-  
+  /* KEYFRAMES */  
   @keyframes wave {
       0% {transform: translateX(0);}
       50% {transform: translateX(-25%);}
@@ -103,11 +95,12 @@
     position: relative;
     overflow: hidden;
     height: 500px;
-    background: url(https://static.radulescu.me/examples/clouds/clouds1000.png);
-    background: url(https://static.radulescu.me/examples/clouds/clouds1000.png) 0 200px,
-                url(https://static.radulescu.me/examples/clouds/clouds1200_1.png) 0 300px,
-                url(https://static.radulescu.me/examples/clouds/clouds1000_blur3.png) 100px 250px;
+    background: url(./imgs/clouds1000.png);
+    background: url(./imgs/clouds10002.png) 0 200px,
+                url(./imgs/clouds12001.png) 0 300px,
+                url(./imgs/clouds1000_blur3.png) 100px 250px;
       animation: wind 120s linear infinite;
+      z-index: 3;
   }
   @keyframes wind{
     0% {
